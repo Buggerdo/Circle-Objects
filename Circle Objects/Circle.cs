@@ -63,9 +63,9 @@
         /// </summary>
         /// <param name="x"></param>
         /// <returns></returns>
-        private static string FormatNumber(double x)
+        public static string FormatNumber(double x)
         {
-            return Math.Round(x , 2).ToString();
+            return Math.Round(x, 2).ToString("N");
         }
     }
 }
