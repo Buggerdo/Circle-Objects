@@ -18,22 +18,25 @@
         {
             return (radius * 2) * Math.PI;
         }
+
         public string CalculateFormattedCircumference()
         {
-            return (Math.Round(CalculateCircumference(), 2)).ToString();
+            return FormatNumber(CalculateCircumference());
         }
+
         public double CalculateArea()
         {
             return radius * radius * Math.PI;
         }
+
         public string CalculateFormattedArea()
         {
-            return (Math.Round(CalculateArea(), 2)).ToString();
-        }
-        private static string FormatNumber(double x)
-        {
-            return x.ToString();
+            return FormatNumber(CalculateArea());
         }
 
+        private static string FormatNumber(double x)
+        {
+            return Math.Round(x , 2).ToString();
+        }
     }
 }
