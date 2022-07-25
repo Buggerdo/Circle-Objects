@@ -1,21 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-
-namespace Circle_Objects
+﻿namespace Circle_Objects
 {
-    internal class Circle
+    public class Circle
     {
+        private double radius;
+
         public Circle(double radius)
         {
-            Radius = radius;
+            radius = radius;
         }
 
-        [Required]
-        [Range(0, 10)]
-        public double Radius { get; private set; }
+        public double Radius
+        {
+            get { return radius; }
+            set { radius = value; }
+        }
+
+        public double CalculateCircumference()
+        {
+            return radius * 2 * Math.PI;
+        }
+        public string CalculateFormattedCircumference()
+        {
+            return (radius * 2 * Math.PI).ToString();
+        }
+        public double CalculateArea()
+        {
+            return radius * radius * Math.PI;
+        }
+        public string CalculateFormattedArea()
+        {
+            return (radius * radius * Math.PI).ToString();
+        }
+        private string FormatNumber(double x)
+        {
+            return x.ToString();
+        }
+
     }
 }
