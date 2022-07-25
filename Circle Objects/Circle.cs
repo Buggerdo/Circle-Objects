@@ -2,26 +2,25 @@
 {
     public class Circle
     {
-        private double radius;
-
-        public Circle(double radius)
-        {
-            radius = radius;
-        }
+        private readonly double radius;
 
         public double Radius
         {
             get { return radius; }
-            set { radius = value; }
+        }
+
+        public Circle(double radius)
+        {
+            this.radius = radius;
         }
 
         public double CalculateCircumference()
         {
-            return radius * 2 * Math.PI;
+            return (radius * 2) * Math.PI;
         }
         public string CalculateFormattedCircumference()
         {
-            return (radius * 2 * Math.PI).ToString();
+            return (Math.Round(CalculateCircumference(), 2)).ToString();
         }
         public double CalculateArea()
         {
@@ -29,9 +28,9 @@
         }
         public string CalculateFormattedArea()
         {
-            return (radius * radius * Math.PI).ToString();
+            return (Math.Round(CalculateArea(), 2)).ToString();
         }
-        private string FormatNumber(double x)
+        private static string FormatNumber(double x)
         {
             return x.ToString();
         }
