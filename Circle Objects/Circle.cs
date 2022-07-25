@@ -12,11 +12,19 @@
         public Circle(double radius)
         {
             this.radius = radius;
+
+            Console.WriteLine();
+            Console.WriteLine(Program.lineBreak);
+            Console.WriteLine($"You entered a radius of: {radius}");
+            Console.WriteLine($"Circumference:           {CalculateFormattedCircumference()}");
+            Console.WriteLine($"Area:                    {CalculateFormattedArea()}");
+            Console.WriteLine(Program.lineBreak);
+            Console.WriteLine();
         }
 
         public double CalculateCircumference()
         {
-            return (radius * 2) * Math.PI;
+            return radius * 2 * Math.PI;
         }
 
         public string CalculateFormattedCircumference()
