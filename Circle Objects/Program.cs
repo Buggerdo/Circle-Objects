@@ -8,9 +8,10 @@
             List<Circle> circles = new();
 
             Console.WriteLine(lineBreak);
-            Console.WriteLine("Welcome to the circle creator");
+            Console.WriteLine("Welcome to Troy's circle tester");
             Console.WriteLine(lineBreak);
             Console.WriteLine();
+            Console.Write("Please enter the radius of a circle: ");
 
             circles.Add(new Circle(102));
             circles.Add(new Circle(202));
