@@ -4,11 +4,6 @@
     {
         private readonly double radius;
 
-        public double Radius
-        {
-            get { return radius; }
-        }
-
         public Circle(double radius)
         {
             this.radius = radius;
