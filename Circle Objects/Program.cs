@@ -25,7 +25,7 @@
             Console.Clear();
             Console.WriteLine();
             Console.WriteLine(lineBreak);
-            Console.WriteLine($"Godbye! You made {circles.Count} circles.");
+            Console.WriteLine($"Goodbye! You made {circles.Count} circles.");
             Console.WriteLine($"With a total area of {Circle.FormatNumber(circles.Sum(n => n.CalculateArea()))}");
             Console.WriteLine(lineBreak);
         }
