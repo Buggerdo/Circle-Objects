@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Circle_Objects
+﻿namespace Circle_Objects
 {
     internal class Validator
     {
+        /// <summary>
+        /// Validates user input
+        /// </summary>
+        /// <param name="x">returns a double if input is valid</param>
+        /// <returns>returns true if input is valid</returns>
         public static bool UserInput(out double x)
         {
             try
@@ -24,6 +23,10 @@ namespace Circle_Objects
             }
         }
 
+        /// <summary>
+        /// Askes the user if they want to continue
+        /// </summary>
+        /// <returns>True if the user wants to continue</returns>
         public static bool Continue()
         {
             Console.Write("Continue Y/N? ");
