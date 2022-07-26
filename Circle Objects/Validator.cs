@@ -13,7 +13,8 @@ namespace Circle_Objects
             try
             {
                 x = double.Parse(Console.ReadLine());
-                return true;
+                if (x > 0) { return true; }
+                return false;
             }
             catch(Exception)
             {
