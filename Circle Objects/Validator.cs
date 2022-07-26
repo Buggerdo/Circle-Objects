@@ -31,7 +31,7 @@
         {
             Console.Write("Continue Y/N? ");
             string userInput = Console.ReadLine().ToLower().Trim();
-            if("yes".StartsWith(userInput))
+            if(userInput != String.Empty && "yes".StartsWith(userInput))
             {
                 return true;
             }
