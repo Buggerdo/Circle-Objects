@@ -9,6 +9,7 @@
 
             do
             {
+                Console.Clear();
                 Console.WriteLine(lineBreak);
                 Console.WriteLine("Welcome to Troy's circle tester");
                 Console.WriteLine(lineBreak);
@@ -20,10 +21,8 @@
                     circles.Add(new Circle(userInput));
                 }
 
-
-                Console.Clear();
             } while(Validator.Continue());
-
+            Console.Clear();
             Console.WriteLine();
             Console.WriteLine(lineBreak);
             Console.WriteLine($"Godbye! You made {circles.Count} circles.");
