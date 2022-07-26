@@ -1,4 +1,4 @@
-﻿    namespace Circle_Objects
+﻿namespace Circle_Objects
 {
     internal class Program
     {
@@ -7,15 +7,22 @@
         {
             List<Circle> circles = new();
 
-            Console.WriteLine(lineBreak);
-            Console.WriteLine("Welcome to Troy's circle tester");
-            Console.WriteLine(lineBreak);
-            Console.WriteLine();
-            Console.Write("Please enter the radius of a circle: ");
+            do
+            {
+                Console.WriteLine(lineBreak);
+                Console.WriteLine("Welcome to Troy's circle tester");
+                Console.WriteLine(lineBreak);
+                Console.WriteLine();
+                Console.Write("Please enter the radius of a circle: ");
 
-            circles.Add(new Circle(102));
-            circles.Add(new Circle(202));
-            circles.Add(new Circle(10));
+                if(Validator.UserInput(out double userInput))
+                {
+                    circles.Add(new Circle(userInput));
+                }
+
+
+                Console.Clear();
+            } while(Validator.Continue());
 
             Console.WriteLine();
             Console.WriteLine(lineBreak);
